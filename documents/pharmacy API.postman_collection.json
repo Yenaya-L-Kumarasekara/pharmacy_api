@@ -1,0 +1,951 @@
+{
+	"info": {
+		"_postman_id": "a4805c2c-40bf-4be3-bf2e-363217a4212a",
+		"name": "pharmacy API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16934836"
+	},
+	"item": [
+		{
+			"name": "Authorized",
+			"item": [
+				{
+					"name": "Owner",
+					"item": [
+						{
+							"name": "Customer",
+							"item": [
+								{
+									"name": "Insert Customers",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"first_name\": \"Yenaya\",\r\n    \"last_name\": \"sekara\",\r\n    \"phone_number\": \"123456789\",\r\n    \"email\": \"jhdusgfg@gmailaaa.com\",\r\n    \"address\": \"12,sdhsh,dbsg\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/customer",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"customer"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Customers",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/customer",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"customer"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a Customer",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"first_name\": \"Yenaya\",\r\n    \"last_name\": \"sekara\",\r\n    \"phone_number\": \"123456789\",\r\n    \"email\": \"jhdusgfg@gmailaaa.com\",\r\n    \"address\": \"12,sdhsh,dbsg\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/customer/{{id}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"customer",
+												"{{id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete a customer",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/customer/{{id}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"customer",
+												"{{id}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Medication",
+							"item": [
+								{
+									"name": "Insert Medication",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"pandol\",\r\n    \"quantity\": 100,\r\n    \"buying_price\": 1000,\r\n    \"selling_price\": 1200,\r\n    \"expiry_date\": \"2024-04-01\",\r\n    \"manufacture_date\": \"2024-04-01\",\r\n    \"category_idcategory\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/medication",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"medication"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Medication",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/medication",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"medication"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a Medication",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"pandol\",\r\n    \"quantity\": 100,\r\n    \"buying_price\": 1000,\r\n    \"selling_price\": 1200,\r\n    \"expiry_date\": \"2024-04-01\",\r\n    \"manufacture_date\": \"2024-04-01\",\r\n    \"category_idcategory\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/medication/{{id}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"medication",
+												"{{id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete a Medication",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/medication/{{id}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"medication",
+												"{{id}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Category",
+							"item": [
+								{
+									"name": "Insert Category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/category",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"category"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Manager",
+					"item": [
+						{
+							"name": "Medication",
+							"item": [
+								{
+									"name": "Get Medication",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/medication",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"medication"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a Medication",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"pandol\",\r\n    \"quantity\": 100,\r\n    \"buying_price\": 1000,\r\n    \"selling_price\": 1200,\r\n    \"expiry_date\": \"2024-04-01\",\r\n    \"manufacture_date\": \"2024-04-01\",\r\n    \"category_idcategory\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/medication/{{id}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"medication",
+												"{{id}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete a Medication",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"first_name\": \"Yenaya\",\r\n    \"last_name\": \"sekara\",\r\n    \"phone_number\": \"123456789\",\r\n    \"email\": \"jhdusgfg@gmailaaa.com\",\r\n    \"address\": \"12,sdhsh,dbsg\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/medication/{{id}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"medication",
+												"{{id}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Customer",
+							"item": [
+								{
+									"name": "Get Customers",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/customer",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"customer"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a Customer",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"first_name\": \"Yenaya\",\r\n    \"last_name\": \"sekara\",\r\n    \"phone_number\": \"123456789\",\r\n    \"email\": \"jhdusgfg@gmailaaa.com\",\r\n    \"address\": \"12,sdhsh,dbsg\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/customer",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"customer"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete a customer",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/api/customer/{{id}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"customer",
+												"{{id}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Cashier",
+					"item": [
+						{
+							"name": "Medication",
+							"item": [
+								{
+									"name": "Get Medication",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"first_name\": \"Yenaya\",\r\n    \"last_name\": \"sekara\",\r\n    \"phone_number\": \"123456789\",\r\n    \"email\": \"jhdusgfg@gmailaaa.com\",\r\n    \"address\": \"12,sdhsh,dbsg\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/medication",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"medication"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a Medication",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"pandol\",\r\n    \"quantity\": 100,\r\n    \"buying_price\": 1000,\r\n    \"selling_price\": 1200,\r\n    \"expiry_date\": \"2024-04-01\",\r\n    \"manufacture_date\": \"2024-04-01\",\r\n    \"category_idcategory\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/medication/{{id}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"medication",
+												"{{id}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Customers",
+							"item": [
+								{
+									"name": "Insert Customers",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"first_name\": \"Yenaya\",\r\n    \"last_name\": \"sekara\",\r\n    \"phone_number\": \"123456789\",\r\n    \"email\": \"jhdusgfg@gmailaaa.com\",\r\n    \"address\": \"12,sdhsh,dbsg\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/api/customer",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"api",
+												"customer"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = JSON.parse(responseBody);\r",
+									"\r",
+									"const token = jsonData?.access_token;\r",
+									"\r",
+									"pm.collectionVariables.set(\"token\", token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"iresha@gmail.com\",\r\n    \"password\" : \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Mock Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"iresha@gmail.com\",\r\n    \"password\" : \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 May 2024 10:10:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": 6,\n        \"name\": \"yenaya\",\n        \"username\": \"yenaya123\",\n        \"email\": \"iresha@gmail.com\",\n        \"role\": \"Owner\",\n        \"created_at\": \"2024-05-10T10:09:26.000000Z\",\n        \"updated_at\": \"2024-05-10T10:09:26.000000Z\"\n    },\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2UyYTI3NGUzNDk2YTdmZTg1MTFkMDZiYTRmMGRhMjY2NmMxY2Y3YzQ3MjkyODZhYmU3MzFkYWU3OTE1NGRmNzA5NjY2MTU5OWVjMWQ4N2IiLCJpYXQiOjE3MTUzMzU4MjkuNDMzNTQzLCJuYmYiOjE3MTUzMzU4MjkuNDMzNTQ1LCJleHAiOjE3NDY4NzE4MjkuNDI3NzIyLCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.YdphngzmoJRHvNHHT5oOUrcWGAyiKYJE9aNNK8BKkcxYau4l1zGvTNVstV2Y25i0RHeSXtTue0IvfkPUUcsfKD-FdEup8Zhh2Vpz-MjZ5osLB0BPQXlIkTydMhZEKLvC4d1JE_mhyvYmdToSEGPWVe_sTQnbq3ChWTL7pmsmMFRxJBNkzczASiv_rP_zKbDFePk8UNIADeK2L58Iisx8FGqk7jKXNc-nrUQy2JY422fw70-CUMBEG6OsjPOLQ_U-FLtj4q64vGLwIoE5NMb0_3XWD4KloLR2AQF83IAVjEEIDk9H3rSLTTo_5bhuWbA8GVUQ05oaVLJuoIGheFdM3OG83mv5XkA8YxOHN7SyLs2MMjjcGy8rgbcPz9wLOatZe7RudMH2DEof1wqIbnDtH6zzYK9LndfTR3-cX5kdyoHJ56o_ZzmqX1ISvZSg1g9e4LLBtb-d0-jx_dJvA1eZfSmx-tEaKWV9ajvpcjQWID-yexIRnKZJZE8nlp6SRNVN0NGqgHlYd6acB4FZH7RNG5VJuEV6z-d6aYHavF68XSsZglWMT2mZUekFGxUD7QxSbb5a6S14dgEa01IcPtLS4VhXOJ8Pa-Lt4oDBEcJ3t7s5NMuxNT1ItV-9uNUcDSw3AjPMJu27FC4dgzpeFlv0Gg1qSnRVMmG5ygisIoIiVs0\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"yenaya\",\r\n    \"username\" : \"yenaya123\",\r\n    \"email\" : \"iresha@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"role\" : \"Owner\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/register",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Mock Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"yenaya\",\r\n    \"username\" : \"yenaya123\",\r\n    \"email\" : \"iresha@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"role\" : \"Owner\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/register",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.14"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 May 2024 10:09:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/logout",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://127.0.0.1:8000",
+			"type": "default"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
